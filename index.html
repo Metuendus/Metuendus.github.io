@@ -5,11 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>José Carlos Corona - Data & Analytics Innovation Leader</title>
         <link rel="stylesheet" href="styles/main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <script>
-            // Función para actualizar las fechas dinámicamente
+
             function updateDates() {
                 const currentDate = new Date();
-                const startDate = new Date(2024, 8); // Septiembre 2024 (mes es 0-based)
+                const startDate = new Date(2024, 8);
                 
                 const monthsDiff = (currentDate.getFullYear() - startDate.getFullYear()) * 12 + 
                                  (currentDate.getMonth() - startDate.getMonth());
@@ -251,11 +254,58 @@
 
         <div class="section">
             <h3 class="section-title">Proyectos de Impacto</h3>
-            <ul>
-                <li>Arquitectura e implementación de sistema end-to-end para clasificación automática de productos, resultando en optimización de inventario y reducción de costos operativos</li>
-                <li>Desarrollo de framework de automatización usando GenAI que redujo tiempos de procesamiento en análisis de campañas</li>
-                <li>Implementación de solución cloud-native para análisis de comportamiento de usuario en tiempo real</li>
-            </ul>
+            
+            <div class="project-grid">
+                <div class="project-item">
+                    <h4>Plataforma de Generación de Contenido Publicitario con IA</h4>
+                    <p class="project-context">Para una de las principales agencias de marketing digital en México</p>
+                    <ul>
+                        <li>Desarrollo de una herramienta propietaria de generación de copies publicitarios impulsada por IA</li>
+                        <li>Implementación de modelos de GenAI para crear contenido optimizado para Google, Facebook y TikTok Ads</li>
+                        <li>La herramienta actualmente asiste en la creación de contenido para más de 50 marcas activas</li>
+                    </ul>
+                </div>
+    
+                <div class="project-item">
+                    <h4>Sistema de Clasificación Inteligente para Performance Max</h4>
+                    <p class="project-context">Para retailer nacional con más de 10,000 SKUs activos</p>
+                    <ul>
+                        <li>Desarrollo de algoritmo en R para clasificación automatizada de productos en categorías de performance</li>
+                        <li>Integración de datos de Google Merchant Center y métricas de campañas para análisis holístico</li>
+                        <li>Implementación resultó en mejora significativa en ROAS de campañas PMax</li>
+                    </ul>
+                </div>
+    
+                <div class="project-item">
+                    <h4>Plataforma Predictiva de Tendencias Publicitarias</h4>
+                    <p class="project-context">Utilizada por múltiples cuentas enterprise de la agencia</p>
+                    <ul>
+                        <li>Desarrollo de aplicación Streamlit para democratizar el acceso a modelos predictivos</li>
+                        <li>Implementación de Prophet con interface intuitiva para análisis de series temporales</li>
+                        <li>Inclusión de validaciones y guías para asegurar interpretaciones estadísticamente válidas</li>
+                    </ul>
+                </div>
+    
+                <div class="project-item">
+                    <h4>Análisis Competitivo de Precios para E-commerce</h4>
+                    <p class="project-context">Para uno de los principales retailers omnicanal en México</p>
+                    <ul>
+                        <li>Desarrollo de modelo de análisis competitivo usando datos de Google Merchant Center</li>
+                        <li>Implementación de regresión lineal para correlacionar precios con performance de campañas</li>
+                        <li>Los insights generados impactaron directamente en la estrategia de pricing digital</li>
+                    </ul>
+                </div>
+    
+                <div class="project-item">
+                    <h4>Sistema Automatizado de Monitoreo de Campañas</h4>
+                    <p class="project-context">Implementado para todo el equipo de gestión de campañas</p>
+                    <ul>
+                        <li>Desarrollo de bot de Slack integrado con APIs de plataformas publicitarias</li>
+                        <li>Implementación de sistema de alertas en tiempo real para monitoreo de pacing</li>
+                        <li>Reducción significativa en tiempo de respuesta ante desviaciones en performance</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </body>
 </html>
