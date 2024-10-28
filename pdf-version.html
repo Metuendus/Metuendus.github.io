@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>José Carlos Corona</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1e293b;
+            --accent: #3b82f6;
+            --text: #334155;
+            --text-light: #64748b;
+            --background: #ffffff;
+            --border: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+            color: var(--text);
+            background: var(--background);
+            padding: 2rem;
+            max-width: 850px;
+            margin: 0 auto;
+            font-size: 0.9rem;
+        }
+
+        .header {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 1rem;
+        }
+
+        .profile-photo {
+            width: 120px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .header-content {
+            flex-grow: 1;
+        }
+
+        h1 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 0.3rem;
+        }
+
+        h2 {
+            color: var(--accent);
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .section {
+            margin-bottom: 1.2rem;
+        }
+
+        .section-title {
+            color: var(--primary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title::after {
+            content: '';
+            flex-grow: 1;
+            height: 1px;
+            background: var(--border);
+            margin-left: 0.5rem;
+        }
+
+        .two-columns {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 2rem;
+        }
+
+        .experience-item {
+            margin-bottom: 1rem;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 1rem;
+        }
+
+        .experience-details {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+        }
+
+        .company-position {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .company {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .position {
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .location {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .date {
+            color: var(--text-light);
+            font-size: 0.8rem;
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        .responsibilities {
+            margin-top: 0.3rem;
+            padding-left: 1rem;
+        }
+
+        .responsibilities li {
+            font-size: 0.85rem;
+            margin-bottom: 0.2rem;
+            line-height: 1.4;
+            position: relative;
+            padding-left: 0.8rem;
+        }
+
+        .responsibilities li::before {
+            content: "•";
+            color: var(--accent);
+            position: absolute;
+            left: -0.3rem;
+        }
+
+        .sidebar {
+            font-size: 0.85rem;
+        }
+
+        .skill-category {
+            margin-bottom: 0.8rem;
+        }
+
+        .skill-category h4 {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        @media print {
+            body {
+                padding: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .profile-photo {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .experience-item {
+                page-break-inside: avoid;
+            }
+
+            @page {
+                margin: 0.5cm;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .two-columns {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .contact {
+                justify-content: center;
+            }
+
+            .experience-item {
+                grid-template-columns: 1fr;
+            }
+
+            .date {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="profile-photo.jpg" alt="José Carlos Corona" class="profile-photo">
+        <div class="header-content">
+            <h1>José Carlos Corona Chablé</h1>
+            <h2>Data & Analytics Innovation Leader</h2>
+            <div class="contact">
+                <span>Ciudad de México</span>
+                <span>josecarlos.corona@outlook.com</span>
+                <span>(55) 5193-6310</span>
+                <span>linkedin.com/in/josecarloscorona</span>
+                <span>metuendus.github.io</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="two-columns">
+        <div class="main-content">
+            <div class="section">
+                <div class="section-title">Perfil Profesional</div>
+                <p>Líder en análisis de datos y automatización con más de 7 años de experiencia transformando datos en soluciones de negocio escalables. Especializado en desarrollo de arquitecturas cloud-native e implementación de soluciones de IA Generativa. Combino sólida base técnica en R y Python con visión estratégica para optimización de procesos.</p>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Experiencia Profesional</div>
+                
+                <div class="experience-item">
+                    <div class="experience-details">
+                        <div class="company-position">
+                            <span class="company">EPA Digital</span>
+                            <span class="position">Innovation & Automation Lead</span>
+                        </div>
+                        <div class="location">Ciudad de México, México</div>
+                        <ul class="responsibilities">
+                            <li>Liderazgo en la transformación digital mediante implementación de soluciones GenAI</li>
+                            <li>Desarrollo de frameworks de automatización usando LangGraph</li>
+                            <li>Despliegue de soluciones en GCP (Cloud Functions, App Engine, Cloud Run)</li>
+                        </ul>
+                    </div>
+                    <div class="date">Sep 2024 - Presente</div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-details">
+                        <div class="company-position">
+                            <span class="company">EPA Digital</span>
+                            <span class="position">Administrador de análisis de datos</span>
+                        </div>
+                        <div class="location">Ciudad de México, México</div>
+                        <ul class="responsibilities">
+                            <li>Diseño de arquitectura de datos y pipelines ETL usando R y Polars</li>
+                            <li>Implementación de soluciones cloud en GCP</li>
+                            <li>Desarrollo de visualizaciones interactivas empresariales</li>
+                        </ul>
+                    </div>
+                    <div class="date">2020 - Sep 2024</div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-details">
+                        <div class="company-position">
+                            <span class="company">EPA Digital</span>
+                            <span class="position">Analista de datos de marketing</span>
+                        </div>
+                        <div class="location">Ciudad de México</div>
+                        <ul class="responsibilities">
+                            <li>Identificación y análisis de KPIs del mercado</li>
+                            <li>Interpretación y traducción de datos para estrategias de marketing</li>
+                        </ul>
+                    </div>
+                    <div class="date">2019 - 2020</div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-details">
+                        <div class="company-position">
+                            <span class="company">EPA Digital</span>
+                            <span class="position">Conversion Rate Optimization Expert</span>
+                        </div>
+                        <div class="location">Ciudad de México</div>
+                        <ul class="responsibilities">
+                            <li>Optimización de tasas de conversión para campañas digitales</li>
+                            <li>Implementación de estrategias de testing y mejora continua</li>
+                        </ul>
+                    </div>
+                    <div class="date">Ene 2019 - Nov 2019</div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-details">
+                        <div class="company-position">
+                            <span class="company">EPA Digital</span>
+                            <span class="position">Ejecutivo de cuentas</span>
+                        </div>
+                        <div class="location">Ciudad de México</div>
+                        <ul class="responsibilities">
+                            <li>Gestión de cuentas y relación con clientes</li>
+                            <li>Desarrollo e implementación de estrategias de marketing digital</li>
+                        </ul>
+                    </div>
+                    <div class="date">Jul 2017 - Sep 2018</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="section">
+                <div class="section-title">Expertise Técnico</div>
+                <div class="skill-category">
+                    <h4>Análisis</h4>
+                    <p>R (tidyverse, tidymodels), Polars, SQL</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Cloud & DevOps</h4>
+                    <p>GCP (Functions, App Engine, Cloud Run)</p>
+                </div>
+                <div class="skill-category">
+                    <h4>IA & Automatización</h4>
+                    <p>LangGraph, GenAI, Streamlit</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Visualización</h4>
+                    <p>ggplot2, plotly, highcharts</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Certificaciones</div>
+                <ul>
+                    <li>Prompt Design in Vertex AI</li>
+                    <li>Data Analyst Track (DataCamp)</li>
+                    <li>Launching into Machine Learning</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Educación</div>
+                <p><strong>Licenciatura en Administración</strong><br>UNAM (2012-2015)</p>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Idiomas</div>
+                <ul>
+                    <li>Español: Nativo</li>
+                    <li>Inglés: Profesional (B2)</li>
+                    <li>Italiano: Básico</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
