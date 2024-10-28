@@ -1,176 +1,261 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>José Carlos Corona - Data & Analytics Innovation Leader</title>
-    <link rel="stylesheet" href="styles/main.css">
-</head>
-<body>
-    <div class="header">
-        <div class="profile-container">
-            <img src="profile-photo.jpg" alt="José Carlos Corona" class="profile-photo">
-            <div class="profile-info">
-                <h1>José Carlos Corona Chablé</h1>
-                <h2>Data & Analytics Innovation Leader</h2>
-                <div class="contact-info">
-                    <span>📍 Ciudad de México</span>
-                    <span>📧 josecarlos.corona@outlook.com</span>
-                    <span>📱 (55) 5193-6310</span>
-                    <span>💼 linkedin.com/in/josecarloscorona</span>
-                    <span>💻 github.com/Metuendus</span>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>José Carlos Corona - Data & Analytics Innovation Leader</title>
+        <link rel="stylesheet" href="styles/main.css">
+        <script>
+            // Función para actualizar las fechas dinámicamente
+            function updateDates() {
+                const currentDate = new Date();
+                const startDate = new Date(2024, 8); // Septiembre 2024 (mes es 0-based)
+                
+                const monthsDiff = (currentDate.getFullYear() - startDate.getFullYear()) * 12 + 
+                                 (currentDate.getMonth() - startDate.getMonth());
+                
+                const years = Math.floor(monthsDiff / 12);
+                const months = monthsDiff % 12;
+                
+                let duration = '';
+                if (years > 0) {
+                    duration += `${years} año${years > 1 ? 's' : ''} `;
+                }
+                if (months > 0 || years === 0) {
+                    duration += `${months} mes${months > 1 ? 'es' : ''}`;
+                }
+                
+                document.getElementById('current-duration').textContent = `(${duration})`;
+                const months_es = [
+                    'enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio',
+                    'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'
+                ];
+                
+                const currentDateText = `${months_es[currentDate.getMonth()]} de ${currentDate.getFullYear()}`;
+                document.getElementById('current-date').textContent = currentDateText;
+            }
+            window.onload = updateDates;
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <div class="profile-container">
+                <img src="profile-photo.jpg" alt="José Carlos Corona" class="profile-photo">
+                <div class="profile-info">
+                    <h1>José Carlos Corona Chablé</h1>
+                    <h2>Data & Analytics Innovation Leader</h2>
+                    <div class="contact-info">
+                        <span>📍 Ciudad de México</span>
+                        <span>📧 josecarlos.corona@outlook.com</span>
+                        <span>📱 (55) 5193-6310</span>
+                        <span>💼 linkedin.com/in/josecarloscorona</span>
+                        <span>💻 github.com/Metuendus</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
+        <div class="section">
+            <h3 class="section-title">Perfil Profesional</h3>
+            <p>Líder en análisis de datos y automatización con más de 7 años de experiencia transformando datos en soluciones de negocio escalables. Especializado en el desarrollo de arquitecturas cloud-native y la implementación de soluciones de IA Generativa. Combino una sólida base técnica en R y Python con una visión estratégica para optimizar procesos de marketing digital y retail.</p>
+        </div>
 
-    <div class="section">
-        <h3 class="section-title">Perfil Profesional</h3>
-        <p>Líder en análisis de datos y automatización con más de 7 años de experiencia transformando datos en soluciones de negocio escalables. Especializado en el desarrollo de arquitecturas cloud-native y la implementación de soluciones de IA Generativa. Combino una sólida base técnica en R y Python con una visión estratégica para optimizar procesos de marketing digital y retail.</p>
-    </div>
-
-    <div class="section">
-        <h3 class="section-title">Experiencia Profesional</h3>
-        
-        <div class="experience-item">
-            <div class="experience-header">
-                <div>
-                    <div class="company">EPA Digital</div>
-                    <div class="position">Administrador de análisis de datos</div>
+        <div class="section">
+            <h3 class="section-title">Experiencia Profesional</h3>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="company">EPA Digital</div>
+                        <div class="position">Innovation & Automation Lead</div>
+                    </div>
+                    <div class="date">
+                        Septiembre 2024 - <span id="current-date">Presente</span>
+                        <span id="current-duration"></span>
+                    </div>
                 </div>
-                <div class="date">Septiembre 2020 - Presente</div>
+                <div class="location">Ciudad de México, México</div>
+                <ul>
+                    <li>Liderazgo en la transformación digital mediante implementación de soluciones GenAI</li>
+                    <li>Desarrollo de frameworks de automatización usando LangGraph para optimización de procesos internos</li>
+                    <li>Despliegue de soluciones en GCP (Cloud Functions, App Engine, Cloud Run)</li>
+                    <li>Implementación de pipelines de automatización para análisis de campañas y reportes</li>
+                    <li>Gestión de equipo técnico y colaboración con stakeholders para identificar oportunidades de innovación</li>
+                </ul>
             </div>
-            <div class="location">Ciudad de México, México</div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="company">EPA Digital</div>
+                        <div class="position">Administrador de análisis de datos</div>
+                    </div>
+                    <div class="date">Septiembre 2020 - Septiembre 2024 (4 años)</div>
+                </div>
+                <div class="location">Ciudad de México, México</div>
+                <ul>
+                    <li>Liderazgo en estrategias de análisis de datos para optimización de campañas</li>
+                    <li>Desarrollo de arquitecturas de datos y soluciones cloud-native</li>
+                    <li>Implementación de metodologías de análisis avanzado y automatización</li>
+                    <li>Gestión de equipo y colaboración con stakeholders para objetivos estratégicos</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="company">EPA Digital</div>
+                        <div class="position">Analista de datos de marketing</div>
+                    </div>
+                    <div class="date">Noviembre 2019 - Septiembre 2020</div>
+                </div>
+                <div class="location">Polanco Reforma, Ciudad de México</div>
+                <ul>
+                    <li>Identificación y análisis de KPIs del mercado</li>
+                    <li>Interpretación y traducción de datos para estrategias de marketing</li>
+                    <li>Soporte a gerentes de marketing con insights basados en datos</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="company">EPA Digital</div>
+                        <div class="position">Conversion Rate Optimization Expert</div>
+                    </div>
+                    <div class="date">Enero 2019 - Noviembre 2019</div>
+                </div>
+                <div class="location">Ciudad de México, México</div>
+                <ul>
+                    <li>Optimización de tasas de conversión para campañas digitales</li>
+                    <li>Implementación de estrategias de testing y mejora continua</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="company">EPA Digital</div>
+                        <div class="position">Analista de marketing digital</div>
+                    </div>
+                    <div class="date">Septiembre 2018 - Febrero 2019</div>
+                </div>
+                <div class="location">Ciudad de México, México</div>
+                <ul>
+                    <li>Análisis e interpretación de métricas web usando Google Analytics, RStudio y Google Sheets</li>
+                    <li>Implementación de Scripts en Google Ads</li>
+                    <li>Elaboración de reportes y automatización de procesos</li>
+                    <li>Conversión de datos en insights accionables para clientes</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="company">EPA Digital</div>
+                        <div class="position">Ejecutivo de cuentas</div>
+                    </div>
+                    <div class="date">Julio 2017 - Septiembre 2018</div>
+                </div>
+                <div class="location">Ciudad de México, México</div>
+                <ul>
+                    <li>Gestión de cuentas y relación con clientes</li>
+                    <li>Desarrollo e implementación de estrategias de marketing digital</li>
+                    <li>Análisis de rendimiento de campañas y optimización</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="company">GuruMarket</div>
+                        <div class="position">Analista de Marketing</div>
+                    </div>
+                    <div class="date">Marzo 2016 - Agosto 2016</div>
+                </div>
+                <div class="location">Ciudad de México</div>
+                <p>Análisis de KPIs y optimización de campañas BTL para múltiples cuentas. Gestión de reportes y coordinación de activaciones con resultados medibles.</p>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="company">RegisMarcas</div>
+                        <div class="position">Marketing Digital Specialist</div>
+                    </div>
+                    <div class="date">Diciembre 2014 - Marzo 2016</div>
+                </div>
+                <div class="location">Ciudad de México</div>
+                <p>Implementación de estrategias SEM y desarrollo de campañas digitales integradas. Gestión de marketing digital y e-commerce para servicios legales.</p>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="company">UNAM Mobile & CENAPyME</div>
+                        <div class="position">Coordinador de Marketing Digital</div>
+                    </div>
+                    <div class="date">Enero 2014 - Febrero 2015</div>
+                </div>
+                <div class="location">Ciudad de México</div>
+                <p>Desarrollo de estrategias digitales para iniciativas universitarias. Análisis de datos para optimización de programas de emprendimiento y marketing digital.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3 class="section-title">Expertise Técnico</h3>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Análisis Avanzado</h4>
+                    R (tidyverse, tidymodels), Polars, SQL
+                </div>
+                <div class="skill-category">
+                    <h4>Cloud & DevOps</h4>
+                    Google Cloud Platform (Functions, App Engine, Cloud Run)
+                </div>
+                <div class="skill-category">
+                    <h4>Visualización</h4>
+                    ggplot2, plotly, highcharts, Looker Studio
+                </div>
+                <div class="skill-category">
+                    <h4>IA & Automatización</h4>
+                    LangGraph, GenAI, Streamlit
+                </div>
+                <div class="skill-category">
+                    <h4>Marketing Digital</h4>
+                    Google Analytics, Google Ads, Facebook Ads
+                </div>
+                <div class="skill-category">
+                    <h4>Desarrollo</h4>
+                    Git, CI/CD, Docker
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3 class="section-title">Certificaciones & Educación</h3>
             <ul>
-                <li>Liderazgo en estrategias de análisis de datos para optimización de campañas</li>
-                <li>Desarrollo de arquitecturas de datos y soluciones cloud-native</li>
-                <li>Implementación de metodologías de análisis avanzado y automatización</li>
-                <li>Gestión de equipo y colaboración con stakeholders para objetivos estratégicos</li>
+                <li>Prompt Design in Vertex AI Skill Badge (2024)</li>
+                <li>Data Analyst with Python Track (DataCamp)</li>
+                <li>Launching into Machine Learning</li>
+                <li><strong>Licenciatura en Administración</strong> - UNAM (2012-2015)</li>
             </ul>
         </div>
 
-        <div class="experience-item">
-            <div class="experience-header">
-                <div>
-                    <div class="company">EPA Digital</div>
-                    <div class="position">Analista de datos de marketing</div>
-                </div>
-                <div class="date">Noviembre 2019 - Septiembre 2020</div>
-            </div>
-            <div class="location">Polanco Reforma, Ciudad de México</div>
+        <div class="section">
+            <h3 class="section-title">Idiomas</h3>
             <ul>
-                <li>Identificación y análisis de KPIs del mercado</li>
-                <li>Interpretación y traducción de datos para estrategias de marketing</li>
-                <li>Soporte a gerentes de marketing con insights basados en datos</li>
+                <li>Español: Nativo</li>
+                <li>Inglés: Profesional (B2)</li>
             </ul>
         </div>
 
-        <div class="experience-item">
-            <div class="experience-header">
-                <div>
-                    <div class="company">EPA Digital</div>
-                    <div class="position">Conversion Rate Optimization Expert</div>
-                </div>
-                <div class="date">Enero 2019 - Noviembre 2019</div>
-            </div>
-            <div class="location">Ciudad de México, México</div>
+        <div class="section">
+            <h3 class="section-title">Proyectos de Impacto</h3>
             <ul>
-                <li>Optimización de tasas de conversión para campañas digitales</li>
-                <li>Implementación de estrategias de testing y mejora continua</li>
+                <li>Arquitectura e implementación de sistema end-to-end para clasificación automática de productos, resultando en optimización de inventario y reducción de costos operativos</li>
+                <li>Desarrollo de framework de automatización usando GenAI que redujo tiempos de procesamiento en análisis de campañas</li>
+                <li>Implementación de solución cloud-native para análisis de comportamiento de usuario en tiempo real</li>
             </ul>
         </div>
-
-        <div class="experience-item">
-            <div class="experience-header">
-                <div>
-                    <div class="company">EPA Digital</div>
-                    <div class="position">Analista de marketing digital</div>
-                </div>
-                <div class="date">Septiembre 2018 - Febrero 2019</div>
-            </div>
-            <div class="location">Ciudad de México, México</div>
-            <ul>
-                <li>Análisis e interpretación de métricas web usando Google Analytics, RStudio y Google Sheets</li>
-                <li>Implementación de Scripts en Google Ads</li>
-                <li>Elaboración de reportes y automatización de procesos</li>
-                <li>Conversión de datos en insights accionables para clientes</li>
-            </ul>
-        </div>
-
-        <div class="experience-item">
-            <div class="experience-header">
-                <div>
-                    <div class="company">EPA Digital</div>
-                    <div class="position">Ejecutivo de cuentas</div>
-                </div>
-                <div class="date">Julio 2017 - Septiembre 2018</div>
-            </div>
-            <div class="location">Ciudad de México, México</div>
-            <ul>
-                <li>Gestión de cuentas y relación con clientes</li>
-                <li>Desarrollo e implementación de estrategias de marketing digital</li>
-                <li>Análisis de rendimiento de campañas y optimización</li>
-            </ul>
-        </div>
-    </div>
-
-
-    <div class="section">
-        <h3 class="section-title">Expertise Técnico</h3>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h4>Análisis Avanzado</h4>
-                R (tidyverse, tidymodels), Polars, SQL
-            </div>
-            <div class="skill-category">
-                <h4>Cloud & DevOps</h4>
-                Google Cloud Platform (Functions, App Engine, Cloud Run)
-            </div>
-            <div class="skill-category">
-                <h4>Visualización</h4>
-                ggplot2, plotly, highcharts, Looker Studio
-            </div>
-            <div class="skill-category">
-                <h4>IA & Automatización</h4>
-                LangGraph, GenAI, Streamlit
-            </div>
-            <div class="skill-category">
-                <h4>Marketing Digital</h4>
-                Google Analytics, Google Ads, Facebook Ads
-            </div>
-            <div class="skill-category">
-                <h4>Desarrollo</h4>
-                Git, CI/CD, Docker
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <h3 class="section-title">Certificaciones & Educación</h3>
-        <ul>
-            <li>Prompt Design in Vertex AI Skill Badge (2024)</li>
-            <li>Data Analyst with Python Track (DataCamp)</li>
-            <li>Launching into Machine Learning</li>
-            <li><strong>Licenciatura en Administración</strong> - UNAM (2012-2015)</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h3 class="section-title">Idiomas</h3>
-        <ul>
-            <li>Español: Nativo</li>
-            <li>Inglés: Profesional (B2)</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h3 class="section-title">Proyectos de Impacto</h3>
-        <ul>
-            <li>Arquitectura e implementación de sistema end-to-end para clasificación automática de productos, resultando en optimización de inventario y reducción de costos operativos</li>
-            <li>Desarrollo de framework de automatización usando GenAI que redujo tiempos de procesamiento en análisis de campañas</li>
-            <li>Implementación de solución cloud-native para análisis de comportamiento de usuario en tiempo real</li>
-        </ul>
-    </div>
-</body>
+    </body>
 </html>
